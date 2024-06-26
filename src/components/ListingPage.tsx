@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '../hooks';
+import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { fetchElements } from '../features/listing/listingSlice';
-import Navigation from './Navigation';
 
 const ListingPage: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -12,8 +11,7 @@ const ListingPage: React.FC = () => {
   }, [dispatch]);
 
   return (
-    <div>
-      <Navigation />
+    <div> 
       <h1>Listing</h1>
       {loading && <p>Loading...</p>}
       {error && <p>Error: {error}</p>}

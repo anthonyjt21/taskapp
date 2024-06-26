@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import { addTask } from '../features/tasks/tasksSlice';
 import AddTaskModal from './AddTaskModal';
 import TaskList from './TaskList';
-import Navigation from './Navigation';
 
 const TaskPage: React.FC = () => {
   const dispatch = useDispatch();
@@ -15,8 +14,7 @@ const TaskPage: React.FC = () => {
   };
 
   return (
-    <div>
-      <Navigation />
+    <div>    
       <h1>Tasks</h1>
       <TaskList />
       <button onClick={() => setShowModal(true)}>Add New Task</button>

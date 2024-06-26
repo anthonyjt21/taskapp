@@ -21,6 +21,7 @@ const AddTaskModal: React.FC<AddTaskModalProps> = ({
     if (description.trim()) {
       onAddTask(description);
       setDescription('');
+      onClose();
     }
   };
 
